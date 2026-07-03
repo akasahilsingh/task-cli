@@ -16,6 +16,8 @@ A simple and lightweight command-line interface (CLI) application for managing y
     - [List All Tasks](#list-all-tasks)
     - [Update a Task](#update-a-task)
     - [Delete a Task](#delete-a-task)
+    - [Mark a Task as Complete](#mark-a-task-as-complete)
+    - [Help](#help)
   - [📁 Project Structure](#-project-structure)
   - [🗂️ Data Format](#️-data-format)
   - [💡 Examples](#-examples)
@@ -23,6 +25,7 @@ A simple and lightweight command-line interface (CLI) application for managing y
     - [Example 2: Update an Incorrect Task](#example-2-update-an-incorrect-task)
     - [Example 3: View All Tasks](#example-3-view-all-tasks)
     - [Example 4: Delete a Task](#example-4-delete-a-task)
+    - [Example 5: Mark a Task as Done](#example-5-mark-a-task-as-done)
   - [🔮 Future Enhancements](#-future-enhancements)
   - [🤝 Contributing](#-contributing)
   - [📄 License](#-license)
@@ -37,6 +40,8 @@ A simple and lightweight command-line interface (CLI) application for managing y
 - **List Tasks**: View all tasks stored in the system
 - **Update Tasks**: Modify existing task descriptions
 - **Delete Tasks**: Remove tasks by ID
+- **Mark as Complete**: Toggle a task's completion status
+- **Help Command**: Quick reference for all available commands
 - **Persistent Storage**: Tasks are stored in a JSON file for easy access and backup
 - **Timestamps**: Automatic creation and update timestamps for tracking
 - **Simple CLI Interface**: Intuitive command-based interaction
@@ -167,6 +172,49 @@ ID: 3 is deleted successfully
 
 ---
 
+### Mark a Task as Complete
+
+Mark a task as done by its ID.
+
+**Command:**
+```bash
+npm start mark <task-id>
+```
+
+**Example:**
+```bash
+npm start mark 1
+```
+
+**Output:**
+```
+task 1 is mark as done
+```
+
+---
+
+### Help
+
+Display a quick reference of all available commands.
+
+**Command:**
+```bash
+npm start help
+```
+
+**Output:**
+```
+Hi, This CLI based task tracker is developed by Sahil Singh
+------------------------------------------------------------
+To add task write: npm start add your task
+To list all tasks write: npm start list
+To update task write: npm start update task-id updated task
+To delete task write: npm start delete task-id
+To mark task as completed write: npm start mark task-id
+```
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -245,13 +293,22 @@ npm start list
 npm start delete 2
 ```
 
+### Example 5: Mark a Task as Done
+
+```bash
+# Mark task with ID 1 as completed
+npm start mark 1
+
+# Verify it's marked
+npm start list
+```
+
 ---
 
 ## 🔮 Future Enhancements
 
 Potential features to improve the application:
 
-- **Mark as Complete**: Toggle task completion status
 - **Priority Levels**: Add priority classification (High, Medium, Low)
 - **Due Dates**: Set and track task deadlines
 - **Categories/Tags**: Organize tasks by category
