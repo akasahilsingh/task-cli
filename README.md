@@ -15,12 +15,14 @@ A simple and lightweight command-line interface (CLI) application for managing y
     - [Add a Task](#add-a-task)
     - [List All Tasks](#list-all-tasks)
     - [Update a Task](#update-a-task)
+    - [Delete a Task](#delete-a-task)
   - [📁 Project Structure](#-project-structure)
   - [🗂️ Data Format](#️-data-format)
   - [💡 Examples](#-examples)
     - [Example 1: Create a Daily Task List](#example-1-create-a-daily-task-list)
     - [Example 2: Update an Incorrect Task](#example-2-update-an-incorrect-task)
     - [Example 3: View All Tasks](#example-3-view-all-tasks)
+    - [Example 4: Delete a Task](#example-4-delete-a-task)
   - [🔮 Future Enhancements](#-future-enhancements)
   - [🤝 Contributing](#-contributing)
   - [📄 License](#-license)
@@ -34,6 +36,7 @@ A simple and lightweight command-line interface (CLI) application for managing y
 - **Add Tasks**: Create new tasks with automatic ID assignment and timestamps
 - **List Tasks**: View all tasks stored in the system
 - **Update Tasks**: Modify existing task descriptions
+- **Delete Tasks**: Remove tasks by ID
 - **Persistent Storage**: Tasks are stored in a JSON file for easy access and backup
 - **Timestamps**: Automatic creation and update timestamps for tracking
 - **Simple CLI Interface**: Intuitive command-based interaction
@@ -51,7 +54,7 @@ A simple and lightweight command-line interface (CLI) application for managing y
 
 1. Clone or download this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/akasahilsingh/task-cli.git
    cd task-cli
    ```
 
@@ -143,6 +146,27 @@ id 1 task is updated successfully
 
 ---
 
+### Delete a Task
+
+Remove a task from your list by its ID.
+
+**Command:**
+```bash
+npm start delete <task-id>
+```
+
+**Example:**
+```bash
+npm start delete 3
+```
+
+**Output:**
+```
+ID: 3 is deleted successfully
+```
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -214,13 +238,19 @@ npm start update 3 Buy chicken and vegetables
 npm start list
 ```
 
+### Example 4: Delete a Task
+
+```bash
+# Delete task with ID 2
+npm start delete 2
+```
+
 ---
 
 ## 🔮 Future Enhancements
 
 Potential features to improve the application:
 
-- **Delete Tasks**: Remove completed or unwanted tasks
 - **Mark as Complete**: Toggle task completion status
 - **Priority Levels**: Add priority classification (High, Medium, Low)
 - **Due Dates**: Set and track task deadlines

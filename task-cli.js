@@ -41,14 +41,29 @@ if (process.argv[2] === "update" && upadateId) {
   // console.log(data)
   try {
     const foundIdData = data.find((id) => id.id === Number(upadateId));
-    console.log(foundIdData)
+    console.log(foundIdData);
     foundIdData.task = updateDesc;
     foundIdData.updatedAt = new Date().toISOString();
-    console.log(foundIdData)
-    
+    console.log(foundIdData);
+
     fs.writeFile(FILE, JSON.stringify(data, null, 2), (error, data) => {
       if (error) throw error;
       console.log(`id ${upadateId} task is updated successfully`);
+    });
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+const deleteId = Number(process.argv[3]);
+if (process.argv[2] === "delete" && deleteId) {
+  try {
+    const data = JSON.parse(fs.readFileSync(FILE));
+    // console.log(typeof data)
+    const deletedItem = data.filter((item) => item.id !== deleteId);
+    fs.writeFile(FILE, JSON.stringify(deletedItem, null, 2), (error, data) => {
+      if (error) throw error;
+      console.log(`ID: ${deleteId} is deleted successfully`);
     });
   } catch (error) {
     console.error(error.message);

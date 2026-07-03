@@ -7,13 +7,6 @@
     "updatedAt": "2026-07-02T08:37:30.969Z"
   },
   {
-    "id": 2,
-    "task": "Buy me milk",
-    "completed": false,
-    "createdAt": "2026-07-02T08:37:48.440Z",
-    "updatedAt": "2026-07-02T08:37:48.441Z"
-  },
-  {
     "id": 3,
     "task": "Buy me oats",
     "completed": false,
@@ -54,5 +47,12 @@
     "completed": false,
     "createdAt": "2026-07-02T08:43:50.180Z",
     "updatedAt": "2026-07-02T08:43:50.181Z"
+  },
+  {
+    "id": 9,
+    "task": "do 20min your hobby",
+    "completed": false,
+    "createdAt": "2026-07-03T06:49:25.296Z",
+    "updatedAt": "2026-07-03T06:49:25.297Z"
   }
 ]
